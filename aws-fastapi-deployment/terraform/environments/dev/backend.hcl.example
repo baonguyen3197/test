@@ -1,0 +1,8 @@
+# Pass the bucket from $STATE_BUCKET:
+# terraform init -reconfigure -input=false \
+#   -backend-config=environments/dev/backend.hcl \
+#   -backend-config="bucket=$STATE_BUCKET" \
+#   -backend-config="region=$AWS_REGION"
+key          = "fastapi-aws/dev/terraform.tfstate"
+encrypt      = true
+use_lockfile = true

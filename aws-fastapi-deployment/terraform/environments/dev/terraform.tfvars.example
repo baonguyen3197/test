@@ -1,0 +1,19 @@
+# Required project-specific values. All variables can instead be supplied as
+# TF_VAR_<lowercase_variable_name> environment variables.
+name              = "fastapi-aws"
+vpc_cidr          = "10.40.0.0/16"
+db_engine_version = "REPLACE_WITH_SUPPORTED_VERSION"
+db_instance_class = "REPLACE_WITH_SUPPORTED_CLASS"
+
+# Optional because the active AWS region/profile is discovered automatically.
+# region = "ap-southeast-1"
+# availability_zones = ["ap-southeast-1a", "ap-southeast-1b"]
+
+# Set an ARN directly, or let Terraform discover an issued certificate by domain.
+# certificate_arn = "arn:aws:acm:..."
+certificate_domain_name = "fastapi-app.com"
+
+# Optional AWS account guard. Leave unset to accept the active AWS profile.
+# aws_account_id = "123456789012"
+
+tasks_per_az = 1

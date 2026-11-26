@@ -1,0 +1,7 @@
+/local-stack-docker-compose.yaml
+/volume
+
+/localstack-fastapi-deployment/
+
+.env
+.terraform.lock.hcl

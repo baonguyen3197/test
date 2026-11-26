@@ -1,0 +1,12 @@
+output "aws_account_id" { value = local.effective_account_id }
+output "region" { value = local.region }
+output "availability_zones" { value = local.availability_zones }
+output "alb_dns_name" { value = module.alb.alb_dns_name }
+output "target_group_arn" { value = module.alb.target_group_arn }
+output "ecs_cluster_name" { value = module.ecs.cluster_name }
+output "ecs_service_names" { value = module.ecs.service_names }
+output "ecr_repository_url" { value = module.ecr.repository_url }
+output "rds_instance_identifier" { value = module.database.identifier }
+output "rds_endpoint" { value = module.database.endpoint }
+output "database_secret_arn" { value = module.database.secret_arn }
+output "log_group_name" { value = module.monitoring.log_group_name }
